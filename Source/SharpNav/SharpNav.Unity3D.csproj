@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <OutputPath>$(SolutionDir)Binaries\Unity3D\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DefineConstants>UNITY3D</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>

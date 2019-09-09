@@ -31,7 +31,7 @@ namespace SharpNav.IO
 
 		public NavMeshConfigurationFile(StreamReader input)
 		{
-			var deserializer = new Deserializer(namingConvention: new HyphenatedNamingConvention());
+			var deserializer = new Deserializer();
 			var data = deserializer.Deserialize<YamlData>(input);
 
 			GenerationSettings = data.Config;
@@ -46,7 +46,7 @@ namespace SharpNav.IO
 			data.Export = ExportPath;
 			data.Meshes = InputMeshes;
 
-			var serializer = new Serializer(SerializationOptions.None, new HyphenatedNamingConvention());
+			var serializer = new Serializer();
 			using (StreamWriter writer = new StreamWriter(path))
 				serializer.Serialize(writer, data);
 		}

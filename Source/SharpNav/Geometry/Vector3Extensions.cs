@@ -68,10 +68,12 @@ namespace SharpNav.Geometry
 			Vector3.ComponentMin(ref left, ref right, out result);
 #elif UNITY3D
 			result = Vector3.Min(left, right);
-#else
+#elif MONOGAME
 			Vector3.Min(ref left, ref right, out result);
+#else
+            result = Vector3.Min(left, right);
 #endif
-		}
+        }
 
 		/// <summary>
 		/// Calculates the component-wise maximum of two vectors.
@@ -85,10 +87,12 @@ namespace SharpNav.Geometry
 			Vector3.ComponentMax(ref left, ref right, out result);
 #elif UNITY3D
 			result = Vector3.Min(left, right);
+#elif MONOGAME
+            Vector3.Max(ref left, ref right, out result);
 #else
-			Vector3.Max(ref left, ref right, out result);
+            result = Vector3.Max(left, right);
 #endif
-		}
+        }
 
 		/// <summary>
 		/// Calculates the distance between two points on the XZ plane.
