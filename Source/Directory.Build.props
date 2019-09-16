@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <Description>A fully-managed navigation mesh library.</Description>
+    <Copyright>Copyright © 2013-2015 Robert Rouhani robert.rouhani@gmail.com and other contributors (see CONTRIBUTORS file).</Copyright>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutputPath>$(SolutionDir)..\Binaries\$(MSBuildProjectName)</OutputPath>
+    <BaseIntermediateOutputPath>$(SolutionDir)obj\$(MSBuildProjectName)</BaseIntermediateOutputPath>
+  </PropertyGroup>
+</Project>
